@@ -1,0 +1,293 @@
+[
+  {
+    "name": "DepartmentSectionMobile",
+    "description": "Seção de departamentos que são exibidas no menu mobile",
+    "type": "object",
+    "schema": {
+      "title": "Conjunto de departamentos Mobile",
+      "description": "Adicione um conjunto de departamentos no menu mobile",
+      "type": "object",
+      "required": ["departments"],
+      "properties": {
+        "departments": {
+          "title": "Departamentos",
+          "type": "array",
+          "items": {
+            "title": "Departamento",
+            "type": "object",
+            "required": ["label", "image"],
+            "properties": {
+              "label": {
+                "type": "string",
+                "title": "Label"
+              },
+              "url": {
+                "type": "string",
+                "title": "URL"
+              },
+              "image": {
+                "type": "object",
+                "title": "Imagem que representa o departamento no menu mobile",
+                "required": ["src", "alt"],
+                "properties": {
+                  "src": {
+                    "type": "string",
+                    "title": "Image",
+                    "widget": {
+                      "ui:widget": "image-uploader"
+                    }
+                  },
+                  "alt": {
+                    "type": "string",
+                    "title": "Alt text"
+                  }
+                }
+              },
+              "categories": {
+                "type": "array",
+                "title": "Categorias",
+                "items": {
+                  "type": "object",
+                  "title": "Categoria",
+                  "required": ["label", "subcategories"],
+                  "properties": {
+                    "label": {
+                      "type": "string",
+                      "title": "Label"
+                    },
+                    "subcategories": {
+                      "type": "array",
+                      "title": "Subcategorias",
+                      "items": {
+                        "type": "object",
+                        "title": "Subcategoria",
+                        "required": ["label", "url"],
+                        "properties": {
+                          "label": {
+                            "type": "string",
+                            "title": "Label"
+                          },
+                          "url": {
+                            "type": "string",
+                            "title": "URL"
+                          },
+                          "highlighted": {
+                            "type": "boolean",
+                            "title": "Em destaque"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  {
+    "name": "DepartmentSection",
+    "description": "Seção de departamentos que são exibidas no menu desktop",
+    "type": "object",
+    "schema": {
+      "title": "Conjunto de departamentos Desktop",
+      "description": "Adicione um conjunto de departamentos no menu desktop",
+      "type": "object",
+      "required": ["departments"],
+      "properties": {
+        "departments": {
+          "title": "Departamentos",
+          "type": "array",
+          "items": {
+            "title": "Departamento",
+            "type": "object",
+            "required": ["label", "url"],
+            "properties": {
+              "label": {
+                "type": "string",
+                "title": "Label"
+              },
+              "url": {
+                "type": "string",
+                "title": "URL"
+              },
+              "categories": {
+                "type": "array",
+                "title": "Categorias",
+                "required": ["label", "subcategories"],
+                "items": {
+                  "type": "object",
+                  "title": "Categoria",
+                  "required": ["label", "subcategories"],
+                  "properties": {
+                    "label": {
+                      "type": "string",
+                      "title": "Label"
+                    },
+                    "subcategories": {
+                      "type": "array",
+                      "title": "Subcategorias",
+                      "items": {
+                        "type": "object",
+                        "title": "Subcategoria",
+                        "required": ["label", "url"],
+                        "properties": {
+                          "label": {
+                            "type": "string",
+                            "title": "Label"
+                          },
+                          "url": {
+                            "type": "string",
+                            "title": "URL"
+                          },
+                          "highlighted": {
+                            "type": "boolean",
+                            "title": "Em destaque"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "decorativeImages": {
+                "title": "Imagens decorativas",
+                "type": "array",
+                "items": {
+                  "title": "Imagem decorativa",
+                  "type": "object",
+                  "required": ["src", "alt"],
+                  "properties": {
+                    "src": {
+                      "type": "string",
+                      "title": "Image",
+                      "widget": {
+                        "ui:widget": "image-uploader"
+                      }
+                    },
+                    "alt": {
+                      "type": "string",
+                      "title": "Alt text"
+                    },
+                    "width": {
+                      "type": "number",
+                      "title": "Image Width"
+                    },
+                    "height": {
+                      "type": "number",
+                      "title": "Image Height"
+                    },
+                    "url": {
+                      "type": "string",
+                      "title": "URL"
+                    }
+                  }
+                }
+              },
+              "isMachine": {
+                "type": "boolean",
+                "title": "É uma categoria de máquinas?"
+              },
+              "machinesAttributes": {
+                "title": "Preencha somente ao assinalar o checkbox acima",
+                "type": "array",
+                "items": {
+                  "title": "Máquina",
+                  "type": "object",
+                  "required": ["image", "logo"],
+                  "properties": {
+                    "badge": {
+                      "type": "object",
+                      "title": "Badge da imagem da máquina",
+                      "properties": {
+                        "text": {
+                          "type": "string",
+                          "title": "Texto do badge"
+                        },
+                        "backgroundColor": {
+                          "type": "string",
+                          "title": "Cor de fundo do badge"
+                        },
+                        "textColor": {
+                          "type": "string",
+                          "title": "Cor do texto do badge"
+                        }
+                      }
+                    },
+                    "cta": {
+                      "type": "object",
+                      "title": "CTA da botão da máquina",
+                      "properties": {
+                        "label": {
+                          "type": "string",
+                          "title": "Label do botão"
+                        },
+                        "url": {
+                          "type": "string",
+                          "title": "URL do botão"
+                        }
+                      }
+                    },
+                    "image": {
+                      "type": "object",
+                      "title": "Imagem que representa a máquina",
+                      "properties": {
+                        "src": {
+                          "type": "string",
+                          "title": "Image",
+                          "widget": {
+                            "ui:widget": "image-uploader"
+                          }
+                        },
+                        "alt": {
+                          "type": "string",
+                          "title": "Alt text"
+                        },
+                        "width": {
+                          "type": "number",
+                          "title": "Imagem Width"
+                        },
+                        "height": {
+                          "type": "number",
+                          "title": "Imagem Height"
+                        }
+                      }
+                    },
+                    "logo": {
+                      "type": "object",
+                      "title": "Logo da máquina",
+                      "properties": {
+                        "src": {
+                          "type": "string",
+                          "title": "Image",
+                          "widget": {
+                            "ui:widget": "image-uploader"
+                          }
+                        },
+                        "alt": {
+                          "type": "string",
+                          "title": "Alt text"
+                        },
+                        "width": {
+                          "type": "number",
+                          "title": "Logo Width"
+                        },
+                        "height": {
+                          "type": "number",
+                          "title": "Logo Height"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]

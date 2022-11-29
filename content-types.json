@@ -1,0 +1,13 @@
+[
+  {
+    "id": "menu-mobile",
+    "name": "Menu Mobile",
+    "configurationSchemaSets": []
+  },
+
+  {
+    "id": "menu-desktop",
+    "name": "Menu Desktop",
+    "configurationSchemaSets": []
+  }
+]
