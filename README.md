@@ -1,17 +1,11 @@
-<h1 align="center" >
-  <img src="https://user-images.githubusercontent.com/77810817/165829749-aaa4aa9a-e65c-4a31-a2f6-baef6f5d7169.png" />
-</h1>
+<div align="center" >
+  <h2>Menu</h1>
+</div>
 
-
-<h4 align="center"/> Blog de notícias </p>
-
-![image](https://user-images.githubusercontent.com/77810817/165830868-33f24fd7-ce84-41a9-bd27-872cec13a397.png)
-
+![image](https://user-images.githubusercontent.com/77810817/204598645-280713c0-6940-4f3c-ba57-b590feba9842.png)
 
 
 ## 📋 Tabela de conteúdos
-
-<!--ts-->
 
 * [Sobre](#sobre)
 * [Funcionalidades](#funcionalidades)
@@ -19,51 +13,34 @@
 * [Como usar](#como-usar)
 * [Tecnologias](#tecnologias)
 
-<!--te-->
-
 <h4 align="center">
   Projeto Finalizado 🚀  
 </h4>
 
 <h3 id="sobre">ℹ Sobre </h3>
 
-Um site de posts.
+Esse componente foi criado com o intuito de representar um Menu que comporta departamentos, onde pode ser cadastrado categorias e subcategorias.
+Ele é totalmente configurado via CMS, e nesse caso foi integrado com o CMS presente na VTEX.
 
-O ig.news é uma newsletter que você pode assinar para ficar sincronizado com as notícias sobre React e o mundo da programação.
-
-Muito interessante o que podemos fazer com o Next juntamente ao React, dentre elas:
-- Nos ajuda a melhorar o SEO do nosso site, devido que o React carrega somente se o Javascript estiver habilitado, e alguns motores de busca deixam essa opção desabilitada.
-- Cria um servidor node para montar nossa aplicação antes que seja enviada ao usuário (browser), assim podemos usar conceitos como SSG e SSR, e dessa forma que facilitamos a vida dos motores de busca.
-
-Dentre outras funcionalidades incríveis que o Next traz.
-
-Também foi muito integrar pagamentos com o Stripe e cadastrar no nosso banco de dados as informações do usuário.
 <h3 id="funcionalidades"> ✅ Funcionalidades </h3>
  
-- [x] Criação de Post através do Prismic;
-- [x] Integração com FaunaDB;
-- [x] Integração com Stripe (Forma de pagamento);
-- [x] Integração de Login Social;
+- [x] Cadastro via CMS;
+- [x] Versões para Desktop e Mobile;
+- [x] Acessibilidade;
 
 <h3 id="tecnologias"> 📚 Tecnologias </h3>
 
 - React
 - NextJS
-- CSS Modules
 - Typescript
-- FaunaDB
-- Stripe
-- Prismic
+- Styled Components
 
 
 <h3 id="requisitos">🔧 Pré Requisitos</h3> 
 
  * [Git](https://git-scm.com)
  * [Yarn](https://yarnpkg.com)
- * Criar uma conta no Stripe
- * Criar uma conta no FaunaDB
- * Criar uma conta no Prismic
- * Editor de código de sua preferência.
+ * Possuir acesso a uma conta VTEX
  
 ⚠️ Caso você não queira fazer todos esses passos, clique [aqui](https://www.linkedin.com/feed/update/urn:li:activity:6842171166317142016/) para ver uma demonstração do aplicativo. 
 
@@ -73,17 +50,19 @@ Também foi muito integrar pagamentos com o Stripe e cadastrar no nosso banco de
   # Clone esse projeto 
   $ git clone 'https://github.com/Gustavo-Gava/dashgo'
   
-  # Navegue até a pasta do projeto
-  $ cd ./dashgo
+  $ Faça a configuração da loja para Faststore
   
-  # Instale as dependências
+  # Siga o tutorial da VTEX para instalar o plugin de CMS na sua conta
+  $ https://www.faststore.dev/tutorials/cms-overview
+  
+  # Instale as dependências no seu projeto
   $ yarn
   
-  # Crie um arquivo chamado .env.local
+  # Sincronize as seções e content-types com o CMS
+  $ vtex cms sync
   
-  # Coloque suas chaves nas variáveis declaradas em .env.example, e copie para o arquivo criado no passo anterior
+  # Cadastre os menus no CMS
  
-  
   # Rode o projeto
   $ yarn dev
   # Estará disponível em: http://localhost:3000
